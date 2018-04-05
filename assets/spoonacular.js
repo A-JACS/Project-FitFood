@@ -17,6 +17,7 @@ $.ajax({
     console.log(response.meals[1]);
 
     var meals = response.meals;
+    console.log(meals);
 
     // loop through array to display each recipe's traits
     for (var i = 0; i < meals.length; i++) {
@@ -30,7 +31,18 @@ $.ajax({
         var image = $("<img>").attr("src", "https://spoonacular.com/recipeImages/" + recipeID + "-312x231.jpg");
         console.log(title);
 
-        recipeDiv.append(title, image);
+        // trim image url to grab string  and ID for recipe url
+        var recipeString = meals[i].image.split(".", 1);
+        // alt method: .slice(0, meals[i].image.indexOf("."));
+
+        // console.log(recipeString);
+
+        // grab recipe url on spoonacular site
+        var recipeURL = "https://spoonacular.com/recipes/" + recipeString;
+
+        // console.log(recipeURL);
+
+        recipeDiv.append(title, image, recipeURL);
     
         $("#display").append(recipeDiv);
     };
