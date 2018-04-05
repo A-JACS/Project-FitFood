@@ -1,0 +1,27 @@
+/* font */
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+body {
+  background: grey;
+}
+
+.jumbotron {
+  margin-top: 5%;
+  width: 800px;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3 {
+  display: inline;
+  margin-right: 20px;
+}
+
+.result {
+  color: red;
+}
+
+.bmi-image {
+  margin-bottom: 10%;
+}
