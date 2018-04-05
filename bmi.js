@@ -3,7 +3,7 @@ var app = angular.module('bmiApp', []);
  
 //Text display
 app.controller('headerText', function ($scope){
-  $scope.mainHeader="BMI Calculator";
+  $scope.mainHeader="BMI & BMR Calculator";
 });
  
 //Main results display
@@ -22,6 +22,48 @@ app.controller('mainCtrl', function ($scope){
   $scope.$watch('stats.heightUS', calculateBMI);
 
 });
+
+var bmr;
+        
+function calc() {
+  var age = document.getElementById("age").value;
+  var gender = document.getElementById("gender").value;
+  var heightUS = document.getElementById("heightUS").value;
+  var weightUS = document.getElementById("weightUS").value;
+  if (gender == "masc") {
+  bmr = 66.5 + ( 13.75 * weightUS ) + ( 5.003 * heightUS ) - ( 6.755 * age );
+  }
+  else {
+  bmr = 655.1 + ( 9.563 * weightUS ) + ( 1.850 * heightUS ) - ( 4.676 * age );
+  }
+}
+
+document.getElementsByTagName("button")[0].addEventListener("click", function() {
+  calc();
+  document.getElementById('lblResult').innerHTML = bmr;
+})
+
+
+
+document.getElementsByTagName("button")[0].addEventListener("click", function() {
+  calc();
+  document.getElementById('lblResult').innerHTML = bmr;
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function toggle_visibility(id) {
    var e = document.getElementById(id);
