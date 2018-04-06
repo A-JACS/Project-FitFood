@@ -26,7 +26,7 @@ $.ajax({
         var recipeDiv = $("<div>");
 
         // store values
-        var title = $("<h3>").text(meals[i].title);
+        var title = $("<h4>").text(meals[i].title);
         var recipeID = meals[i].id;
         var image = $("<img>").attr("src", "https://spoonacular.com/recipeImages/" + recipeID + "-312x231.jpg");
         console.log(title);
@@ -40,9 +40,12 @@ $.ajax({
         // grab recipe url on spoonacular site
         var recipeURL = "https://spoonacular.com/recipes/" + recipeString;
 
-        // console.log(recipeURL);
+        var link = $("<a>").attr("href", recipeURL).attr("target", "blank_").text("Get the recipe");
 
-        recipeDiv.append(title, image, recipeURL);
+        // console.log(recipeURL);
+        var br = $("<br>");
+
+        recipeDiv.append(title, image, br, link);
     
         $("#display").append(recipeDiv);
     };
