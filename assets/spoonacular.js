@@ -20,11 +20,11 @@ $.ajax({
     console.log(meals);
 
     // loop through array to display each recipe's traits
-    for (var i = 0; i < meals.length; i++) {
+    for (let i = 0; i < meals.length; i++) {
         console.log(meals[i].title);
 
         // determines which html card is selected
-        var cardID = "recipe" + i;
+        let cardID = "recipe" + i;
 
         // displays recipe title from api
         $("#" + cardID + " .card-title").text(meals[i].title);
@@ -37,10 +37,22 @@ $.ajax({
         var recipeString = meals[i].image.split(".", 1);
         var recipeURL = "https://spoonacular.com/recipes/" + recipeString;
         $("#" + cardID + " .card-action > a").attr("href", recipeURL).text("Get the recipe").attr("target", "_blank");
+
+        // new ajax call for current recipe to grab and display summary
+        var summaryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + recipeID + "/summary";
+
+        $.ajax({
+            url: summaryURL,
+            method: 'GET',
+            headers: {
+                "X-Mashape-Key": "y1tll6WFTbmsh9kWYRNfHHKIIEjep1GFBA7jsnZvXrjPgY7Mqg",
+                "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com",
+                "Accept": "application/json"
+            }
+          }).then(function(response2) {
+            console.log(response2);
+            var summary = response2.summary.split(".", 5) + ".";
+            $("#" + cardID + " .card-content").html(summary);
+          });
     };
   });
-
-
-
-
-// $("#display").append
