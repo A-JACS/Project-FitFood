@@ -1,22 +1,10 @@
-/* font */
-@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
-body {
-  background: grey;
-}
+
 
 .jumbotron {
   margin-top: 5%;
   width: 800px;
 }
 
-h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-h3 {
-  display: inline;
-  margin-right: 20px;
-}
 
 .result {
   color: red;
@@ -24,4 +12,20 @@ h3 {
 
 .bmi-image {
   margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.calculator {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
 }
