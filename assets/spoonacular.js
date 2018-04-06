@@ -23,31 +23,20 @@ $.ajax({
     for (var i = 0; i < meals.length; i++) {
         console.log(meals[i].title);
 
-        var recipeDiv = $("<div>");
+        // determines which html card is selected
+        var cardID = "recipe" + i;
 
-        // store values
-        var title = $("<h4>").text(meals[i].title);
+        // displays recipe title from api
+        $("#" + cardID + " .card-title").text(meals[i].title);
+
+        // displays recipe image from api
         var recipeID = meals[i].id;
-        var image = $("<img>").attr("src", "https://spoonacular.com/recipeImages/" + recipeID + "-312x231.jpg");
-        console.log(title);
+        $("#" + cardID + " .card-image > img").attr("src", "https://spoonacular.com/recipeImages/" + recipeID + "-312x231.jpg");
 
-        // trim image url to grab string  and ID for recipe url
+        // creates and displays url link to recipe
         var recipeString = meals[i].image.split(".", 1);
-        // alt method: .slice(0, meals[i].image.indexOf("."));
-
-        // console.log(recipeString);
-
-        // grab recipe url on spoonacular site
         var recipeURL = "https://spoonacular.com/recipes/" + recipeString;
-
-        var link = $("<a>").attr("href", recipeURL).attr("target", "blank_").text("Get the recipe");
-
-        // console.log(recipeURL);
-        var br = $("<br>");
-
-        recipeDiv.append(title, image, br, link);
-    
-        $("#display").append(recipeDiv);
+        $("#" + cardID + " .card-action > a").attr("href", recipeURL).text("Get the recipe").attr("target", "_blank");
     };
   });
 
