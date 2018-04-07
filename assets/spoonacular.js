@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+// will take BMR input from local storage -- hard-coded meanwhile
 var targetCalories = 2000;
 
 $("#bmr").html("<b>" + targetCalories + "</b>");

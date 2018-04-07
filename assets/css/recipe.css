@@ -29,4 +29,11 @@ p {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
   }
+
+@media screen and (max-width:1100px) {
+    .recipe-list {
+        flex-wrap: wrap;
+    }
+}
