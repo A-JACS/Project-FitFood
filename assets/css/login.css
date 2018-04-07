@@ -17,14 +17,14 @@ body {
         width: 100%;        
     }
 
-.card{
+.card {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
 
 }
 
-.welcome{
+.welcome {
         height: 250px;
         margin-top: 30px;
 }
@@ -39,11 +39,11 @@ body {
         font-size: 40px;
 } */
 
-.card-content {
+.content-white {
         background: transparent;
 }
 
-.card-content {
+.content-white {
         background-color: #f9f9f9;
 }
 
@@ -54,7 +54,7 @@ body {
 .nav-wrapper {
         height: 100px;
 	background: linear-gradient(-45deg, #23A6D5, #23D5AB, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
+	background-size: 100% 100%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
