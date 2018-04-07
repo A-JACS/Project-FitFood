@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var targetCalories = 2000;
 
 $("#bmr").html("<b>" + targetCalories + "</b>");
@@ -57,3 +59,5 @@ $.ajax({
           });
     };
   });
+
+});
