@@ -15,6 +15,7 @@ $(document).ready(function () {
     var database = firebase.database();
 
     $('#google-login').on('click', function () {
+
         event.preventDefault();
         var provider = new firebase.auth.GoogleAuthProvider();
 
