@@ -25,7 +25,7 @@ p {
 .card-title {
     font-weight: bold!important;
     color: black;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: rgb(245, 228, 153); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
   }
