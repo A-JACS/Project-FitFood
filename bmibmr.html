@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script> -->
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS -->
@@ -49,7 +49,7 @@
           <a href="#" class="brand-logo center">FitFood: Fitness + Food</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
-              <a href="#">My Tracker</a>
+              <a href="./tracker.html">My Tracker</a>
             </li>
             <li>
               <a href="./index.html">Sign Out</a>
@@ -85,7 +85,8 @@
           for 24 hours. It represents the minimum amount of energy needed to keep your body functioning, including breathing
           and keeping your heart beating.</p>
         <div class="form">
-          <form ng-controller="mainCtrl" class="col s12">
+          <!-- <form ng-controller="mainCtrl" class="col s12"> -->
+          <form class="col s12">
             <label>Gender</label>
             <br>
             <label>
@@ -100,11 +101,13 @@
             <br>
             <br>
             <label class="us-weight">Weight (lbs):</label>
-            <input ng-adjust="computeBMI()" ng-model="stats.weightUS" type="number" id="weightUS" value=""></input>
+            <!-- <input ng-adjust="computeBMI()" ng-model="stats.weightUS" type="number" id="weightUS" value=""></input> -->
+            <input type="number" id="weightUS" value=""></input>
             <br>
             <br>
             <label>Height (in):</label>
-            <input ng-adjust="computeBMI()" ng-model="stats.heightUS" type="number" id="heightUS" value=""></input>
+            <!-- <input ng-adjust="computeBMI()" ng-model="stats.heightUS" type="number" id="heightUS" value=""></input> -->
+            <input type="number" id="heightUS" value=""></input>
             <br>
             <br>
             <label>Age: </label>
@@ -113,7 +116,7 @@
             <br>
             <div class="input-field col s6">
               <select name="activity" id="activity">
-                <option value="" disabled selected>Choose your option</option>
+                <option value="" disabled selected>Select Activity Level</option>
                 <option value="1">Sedentary</option>
                 <option value="2">Light Active</option>
                 <option value="3">Moderately Active</option>
@@ -121,28 +124,36 @@
                 <option value="5">Extra Active</option>
               </select>
               <label>Activeness:</label>
+              <br>
             </div>
-            <br>
-            <b>Your BMI is:</b>
-            <br>
-            <h3 class="result">{{stats.BMI | number: 0}}</h3>
-            <br>
+            <div>
+              <br>
+              <b>Your BMI is:</b>
+              <br>
+              <!-- <h3 class="result">{{stats.BMI | number: 0}}</h3> -->
+              <p id="result"></p>
+              <br>
+              <b>Your BMR is:</b>
+              <p id="caloriesneeded"></p>
+              <br>
+            </div>
+
           </form>
-          <br>
-          <b>Your BMR is:</b>
-          <p id="caloriesneeded">(press the button)</p>
+
           <div class="center">
-            <button class="waves-effect waves-light btn-large" type="button" onclick="">
+            <button class="waves-effect waves-light btn-large" type="button" id="click-result">
               Result</button>
+              <br>
           </div>
 
-          <div class="bmi-image">
+          <div id="bmi-image" class="bmi-image">
+
             <p>Success! From your BMI & BMR results, here are some recipes that fit your recommended calorie intake and fitness
               workout for the day.</p>
-            <button class="waves-effect waves-light btn-large" onclick="window.location.href='./recipe.html'">
-              <i class="material-icons left">local_dining</i>  Show Recipes </button>
-            <button class="waves-effect waves-light btn-large" onclick="window.location.href='./workouts.html'">
-              <i class="material-icons left">fitness_center</i> Show Workouts</button>
+            <button class="waves-effect waves-light btn-large expand" onclick="window.location.href='./recipe.html'">
+              <i class="material-icons left">local_dining</i>Show Recipes</button>
+            <button class="waves-effect waves-light btn-large expand" onclick="window.location.href='./workouts.html'">
+              <i class="material-icons left">fitness_center</i>Show Workouts</button>
             <br/>
             <p style="margin-top:20px;">For a detailed overview, use your colored health risk chart.</p>
             <img src="https://bmicalculator.mes.fm/img/bmi-chart.png" alt="bmi index">
@@ -183,7 +194,7 @@
     </div>
 </body>
 
-<script src="bmi.js"></script>
+<script src="./bmi.js"></script>
 
 </body>
 

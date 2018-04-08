@@ -1,27 +1,44 @@
 
-var app = angular.module('bmiApp', []);
+// var app = angular.module('bmiApp', []);
 
-//Text display
-app.controller('headerText', function ($scope){
-  $scope.mainHeader="BMI & BMR Calculator";
-});
+// //Text display
+// app.controller('headerText', function ($scope){
+//   $scope.mainHeader="BMI & BMR Calculator";
+// });
  
-//Main results display
-app.controller('mainCtrl', function ($scope){
-  $scope.stats = {
-    weightUS: 0,
-    heightUS: 0,
-    BMI: 0};
+// //Main results display
+// app.controller('mainCtrl', function ($scope){
+//   $scope.stats = {
+//     weightUS: 0,
+//     heightUS: 0,
+//     BMI: 0};
    
-// BMI computation
-  var calculateBMI = function(){
-    $scope.stats.BMI = ($scope.stats.weightUS * 703) / ($scope.stats.heightUS * $scope.stats.heightUS) ;
-  }
+// // BMI computation
+//   var calculateBMI = function(){
+//     $scope.stats.BMI = ($scope.stats.weightUS * 703) / ($scope.stats.heightUS * $scope.stats.heightUS) ;
+//   }
    
-  $scope.$watch('stats.weightUS', calculateBMI);
-  $scope.$watch('stats.heightUS', calculateBMI);
+//   $scope.$watch('stats.weightUS', calculateBMI);
+//   $scope.$watch('stats.heightUS', calculateBMI);
 
-});
+//   localStorage.setItem("bmi", $scope.stats.BMI);
+//   console.log(localStorage.getItem("bmi"));
+
+// });
+
+
+$('select').formSelect();
+
+function calcBMI(){
+  var height = $("#heightUS").val();
+  var weight = $("#weightUS").val();
+  var bmi = (703*weight/(height*height));
+  $("#result").text(bmi);
+  // console.log(bmi);
+
+  localStorage.setItem("bmi", bmi);
+  console.log(localStorage.getItem("bmi"));
+}
 
 var bmr;
         
@@ -56,17 +73,29 @@ function calc() {
      bmr *= 1.9;
         break;
   }
+
+  localStorage.setItem("bmr", bmr);
+  console.log(localStorage.getItem("bmr"));
 }
 
 document.getElementsByTagName("button")[0].addEventListener("click", function() {
   calc();
   document.getElementById('caloriesneeded').innerHTML = bmr;
+  calcBMI();
 })
 
-//function toggle_visibility(id) {
-  // var e = document.getElementById(id);
-  // if(e.style.display == 'block')
-   //   e.style.display = 'none';
- //  else
- ///     e.style.display = 'block';
-//}
+
+$("#click-result").on('click', function(){  
+  
+  var x = document.getElementById("bmi-image");
+  console.log(x.style.display);
+  if (x.style.display == "block") {
+      x.style.display = "none";
+  } else {
+      x.style.display = "block";
+  }
+
+  // console.log("toggle");
+
+});
+
