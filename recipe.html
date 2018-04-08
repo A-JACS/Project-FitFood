@@ -4,16 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fit Food</title>
+    <title>Fit Food: Fitness + Food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 
     <!-- Materialize CSS -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
@@ -29,8 +28,9 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo center">FitFood: Fitness + Food</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <a href="#!" class="brand-logo center">FitFood</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
                         <li>
                             <a href="./workouts.html">My Workouts</a>
                         </li>
@@ -40,10 +40,12 @@
                         <li>
                             <a href="./index.html">Sign Out</a>
                         </li>
-                        <!-- <li>
-                            <a href="collapsible.html">JavaScript</a>
-                        </li> -->
                     </ul>
+                    <ul class="sidenav" id="mobile-demo">
+                            <li><a href="./workouts.html">My Workouts</a></li>
+                            <li><a href="#">My Tracker</a></li>
+                            <li><a href="./index.html">Sign Out</a></li>
+                        </ul>
                 </div>
             </nav>
         </div>
@@ -52,7 +54,7 @@
     <div class="main-content">
         <div class="container card-content content-white" style="margin-top:20px;padding:20px;">
             <h3>Recipes</h3>
-            <p>Based on your BMR result, below are 3 meals that adds up to your recommended daily calorie intake.</p>
+            <p>Based on your BMR of <span id="bmr"></span> calories, here are 3 recipes that meet to your recommended daily intake.</p>
             <div class="recipe-list">
                 <!-- recipe card 1 -->
                 <div id="recipe0">
@@ -60,13 +62,13 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="images/sample-1.jpg">
-                                <span class="card-title">Card Title</span>
+                                <span class="card-title"></span>
                             </div>
                             <div class="card-content content-white">
 
                             </div>
                             <div class="card-action">
-                                <a href="#">This is a link</a>
+                                <a href="#"></a>
                             </div>
                         </div>
                     </div>
@@ -77,13 +79,13 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="images/sample-1.jpg">
-                                <span class="card-title">Card Title</span>
+                                <span class="card-title"></span>
                             </div>
                             <div class="card-content content-white">
 
                             </div>
                             <div class="card-action">
-                                <a href="#">This is a link</a>
+                                <a href="#"></a>
                             </div>
                         </div>
                     </div>
@@ -95,13 +97,13 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="images/sample-1.jpg">
-                                <span class="card-title">Card Title</span>
+                                <span class="card-title"></span>
                             </div>
                             <div class="card-content content-white">
 
                             </div>
                             <div class="card-action">
-                                <a href="#">This is a link</a>
+                                <a href="#"></a>
                             </div>
                         </div>
                     </div>
@@ -143,6 +145,9 @@
     <!-- JS files -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./assets/spoonacular.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 
 </html>

@@ -17,14 +17,14 @@ body {
         width: 100%;        
     }
 
-.card{
+.card {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
 
 }
 
-.welcome{
+.welcome {
         height: 250px;
         margin-top: 30px;
 }

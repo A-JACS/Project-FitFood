@@ -25,7 +25,15 @@ p {
 .card-title {
     font-weight: bold!important;
     color: black;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: rgb(146, 241, 226); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
   }
+
+@media screen and (max-width:1100px) {
+    .recipe-list {
+        flex-wrap: wrap;
+    }
+}
