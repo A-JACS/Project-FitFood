@@ -37,3 +37,7 @@ h5 {
 .expand{
   width: 240px;
 }
+
+a.btn.tooltipped {
+  background-color: #778899;
+}

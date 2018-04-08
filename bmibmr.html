@@ -35,7 +35,10 @@
       $('button').click(function () {
         $(".bmi-image").show();
       });
+      $('.tooltipped').tooltip();
     });
+
+
   </script>
 </head>
 
@@ -76,11 +79,6 @@
         <hr>
         <br> -->
         <p>Use the calculator below to determine your BMI & BMR. We'll use those results to recommend daily meals and workouts to help you reach a healthy weight.</p>
-        <h5>What is BMI?</h5>
-        <p>Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height. It applies
-          to most men and women ages 20 and older. </p>
-        <h5>What is BMR?</h5>
-        <p>Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise. It represents the minimum amount of energy your body needs to function normally.</p>
         <div class="form">
           <!-- <form ng-controller="mainCtrl" class="col s12"> -->
           <form class="col s12">
@@ -131,12 +129,15 @@
             <br>
             <div>
               <br>
-              <b>Your BMI is:</b>
+              <a class="btn tooltipped" data-position="bottom" data-tooltip="What is BMI? Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height."><i class="material-icons">info</i></a>
+              &nbsp;&nbsp;<b>Your BMI is:</b>
               <br>
               <!-- <h3 class="result">{{stats.BMI | number: 0}}</h3> -->
               <p id="result"></p>
               <br>
-              <b>Your BMR is:</b>
+              <a class="btn tooltipped" data-position="bottom" data-tooltip="What is BMR? Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise."><i class="material-icons">info</i></a>
+
+              &nbsp;&nbsp;<b>Your BMR is:</b>
               <p id="caloriesneeded"></p>
               <br>
             </div>
