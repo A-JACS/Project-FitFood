@@ -66,3 +66,7 @@ $.ajax({
   });
 
 });
+
+$('#reload').click(function() {
+  location.reload();
+});
