@@ -33,6 +33,8 @@ function calcBMI(){
   var height = $("#heightUS").val();
   var weight = $("#weightUS").val();
   var bmi = (703*weight/(height*height));
+
+  bmi = Math.round(bmi * 100) / 100;
   $("#result").text(bmi);
   // console.log(bmi);
 
@@ -74,6 +76,7 @@ function calc() {
         break;
   }
 
+  bmr = Math.round(bmr * 100) / 100;
   localStorage.setItem("bmr", bmr);
   console.log(localStorage.getItem("bmr"));
 }

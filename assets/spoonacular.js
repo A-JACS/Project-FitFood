@@ -1,9 +1,13 @@
+var bmr = localStorage.getItem("bmr");
+
 $(document).ready(function() {
 
 // will take BMR input from local storage -- hard-coded meanwhile
-var targetCalories = 2000;
+var targetCalories = bmr;
 
 $("#bmr").html("<b>" + targetCalories + "</b>");
+
+console.log(targetCalories);
 
 var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=" + targetCalories + "&timeFrame=day";
 

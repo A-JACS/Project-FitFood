@@ -14,7 +14,7 @@ $(function () {
             q: encodeURIComponent(searchString).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
+            publishedAfter: "2012-01-01T00:00:00Z"
         });
         // execute the request
         request.execute(function (response) {
@@ -48,7 +48,7 @@ $(function () {
             q: encodeURIComponent(searchString).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
+            publishedAfter: "2012-01-01T00:00:00Z"
         });
         // execute the request
         request.execute(function (response) {
@@ -82,7 +82,7 @@ $(function () {
             q: encodeURIComponent(searchString).replace(/%20/g, "+"),
             maxResults: 6,
             order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
+            publishedAfter: "2012-01-01T00:00:00Z"
         });
         // execute the request
         request.execute(function (response) {

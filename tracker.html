@@ -15,6 +15,8 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
     <!-- Local CSS  -->
@@ -55,7 +57,7 @@
                             <a href="./workouts.html">My Workouts</a>
                         </li>
                         <li>
-                            <a href="./index.html">Sign Out</a>
+                            <a href="./index.html" id="logout">Sign Out</a>
                         </li>
                         <!-- <li>
                             <a href="collapsible.html">JavaScript</a>
@@ -107,9 +109,9 @@
                                     <label for="exercise">Exercise</label>
                                 </div>
                                 <div class="input-field col s2">
-                                    <input id="duration-input" type="text" class="validate">
-                                    <label for="duration">Duration (mins)</label>
-                                    <!-- <select class="duration">
+                                    <!-- <input id="duration-input" type="text" class="validate">
+                                    <label for="duration">Duration (mins)</label> -->
+                                    <select class="duration" id="duration-input">
                                         <option value="10">10</option>
                                         <option value="20">20</option>
                                         <option value="30">30</option>
@@ -117,12 +119,12 @@
                                         <option value="50">50</option>
                                         <option value="60">60</option>
                                     </select>
-                                    <label>Duration (mins)</label> -->
+                                    <label>Duration (mins)</label>
                                 </div>
                                 <div class="input-field col s1">
-                                    <input id="sets-input" type="text" class="validate">
-                                    <label for="sets">Sets</label>
-                                    <!-- <select class="sets">
+                                    <!-- <input id="sets-input" type="text" class="validate">
+                                    <label for="sets">Sets</label> -->
+                                    <select class="sets" id="sets-input">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -134,7 +136,7 @@
                                         <option value="9">9</option>
                                         <option value="10">10</option>                                        
                                     </select>
-                                    <label>Sets</label> -->
+                                    <label>Sets</label>
                                 </div>
                                 <div class="input-field col s3">
                                     <input id="date-input" type="text" class="validate">
@@ -187,7 +189,9 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/javascript/tracker.js"></script>
+    <script src="./assets/javascript/logout.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
 
 </body>

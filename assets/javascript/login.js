@@ -1,16 +1,25 @@
 $(document).ready(function () {
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDccrOZU8MzbhKL5sBObEDDxHI39Y8RfcM",
-    authDomain: "fitfood-7f508.firebaseapp.com",
-    databaseURL: "https://fitfood-7f508.firebaseio.com",
-    projectId: "fitfood-7f508",
-    storageBucket: "fitfood-7f508.appspot.com",
-    messagingSenderId: "239052826076"
-  };
-  
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    //   var config = {
+    //     apiKey: "AIzaSyDccrOZU8MzbhKL5sBObEDDxHI39Y8RfcM",
+    //     authDomain: "fitfood-7f508.firebaseapp.com",
+    //     databaseURL: "https://fitfood-7f508.firebaseio.com",
+    //     projectId: "fitfood-7f508",
+    //     storageBucket: "fitfood-7f508.appspot.com",
+    //     messagingSenderId: "239052826076"
+    //   };
+
+    var config = {
+        apiKey: "AIzaSyDr59vCL72gV07FpEUyu61F8QZVdy4iEuY",
+        authDomain: "fireauthen-1c11b.firebaseapp.com",
+        databaseURL: "https://fireauthen-1c11b.firebaseio.com",
+        projectId: "fireauthen-1c11b",
+        storageBucket: "fireauthen-1c11b.appspot.com",
+        messagingSenderId: "183413100827"
+    };
+
+    firebase.initializeApp(config);
 
     var database = firebase.database();
 
@@ -22,7 +31,7 @@ $(document).ready(function () {
         return firebase.auth().signInWithPopup(provider).then(function (result) {
             console.log("success");
 
-            
+
             // This gives you a Google Access Token. You can use it to access the Google API.
             var token = result.credential.accessToken;
             // The signed-in user info.

@@ -3,11 +3,11 @@ var bmi = localStorage.getItem("bmi");
 var bmr = localStorage.getItem("bmr");
 
 $(document).ready(function () {
-    // var elemListDuration = document.querySelector('.duration');
-    // var instanceDuration = M.FormSelect.init(elemListDuration);
+    var elemListDuration = document.querySelector('.duration');
+    var instanceDuration = M.FormSelect.init(elemListDuration);
 
-    // var elemListSets = document.querySelector('.sets');
-    // var instanceSets = M.FormSelect.init(elemListSets);
+    var elemListSets = document.querySelector('.sets');
+    var instanceSets = M.FormSelect.init(elemListSets);
 
 
     // var elemDate = document.querySelector('.datepicker');
@@ -40,9 +40,10 @@ $(document).ready(function () {
       event.preventDefault();
   
       console.log($("#exercise-input").val());
-      console.log($("#duration-input").val());
-      console.log($("#sets-input").val());
-      console.log($("#date-input").val());
+      console.log($("#duration-input  option:selected").val());
+      console.log($("#sets-input  option:selected").val());
+      // console.log($("#date-input  option:selected").val());
+      console.log($("#date-input").datepicker({ dateFormat: 'dd-mm-yy' }).val());
   
   
       database.ref().push({
@@ -53,7 +54,7 @@ $(document).ready(function () {
         "sets": $("#sets-input").val(),
         "bmi": bmi,
         "bmr": bmr,
-        "date": $("#date-input").val()
+        "date": $("#date-input").datepicker({ dateFormat: 'dd-mm-yy' }).val()
       });
   
       $("#exercise-input").val("");
@@ -74,12 +75,15 @@ $(document).ready(function () {
       {
       $("#log-table > tbody").append("<tr><td>" + snapshot.val().exercise + "</td><td>" + snapshot.val().duration + "</td><td>" +
                                           snapshot.val().sets + "</td><td>" + snapshot.val().bmi+ "</td><td>" + 
-                                          snapshot.val().bmr + "</td><td>" + snapshot.val().date + "</td></tr>");
+                                          snapshot.val().bmr + "</td><td>" + snapshot.val().date +
+                                          "</td></tr>");
       }
   
     });
 
-
+    $( function() {
+      $( "#date-input" ).datepicker();
+    } );
 
   }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
