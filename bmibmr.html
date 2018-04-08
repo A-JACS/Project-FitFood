@@ -40,52 +40,51 @@
 </head>
 
 <body ng-app="bmiApp">
-  <div class="header">
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">FitFood</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a href="./tracker.html">My Tracker</a>
-            </li>
-            <li>
-              <a href="./index.html" id="logout">Sign Out</a>
-            </li>
-            <!-- <li>
-                            <a href="badges.html">Components</a>
+    <div class="header">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo center">FitFood</a>
+                    <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="./workouts.html">My Workouts</a>
                         </li>
                         <li>
-                            <a href="collapsible.html">JavaScript</a>
-                        </li> -->
-          </ul>
+                            <a href="./tracker.html">My Tracker</a>
+                        </li>
+                        <li>
+                            <a href="./index.html" id="logout">Sign Out</a>
+                        </li>
+                    </ul>
+                    <ul class="sidenav" id="mobile-demo">
+                            <li><a href="./workouts.html">My Workouts</a></li>
+                            <li><a href="#">My Tracker</a></li>
+                            <li><a href="./index.html">Sign Out</a></li>
+                        </ul>
+                </div>
+            </nav>
         </div>
-      </nav>
     </div>
-
-  </div>
   <div class="main-content">
     <div class="container card-content content-white" style="margin-top:20px;">
       <div class="calculator">
-        <h3>My BMI & BMR</h3>
+        <h3 class="center">A Plan Fit for You</h3>
         <!-- <div class="container">
       <div class="jumbotron" ng-controller="headerText">
         <h2 class="main-header">{{mainHeader}}</h2>
         <hr>
         <br> -->
-        <p>Use the calculator below to determine your BMI & BMR and get recommended daily meals and exercise workouts based
-          on your results.</p>
+        <p>Use the calculator below to determine your BMI & BMR. We'll use those results to recommend daily meals and workouts to help you reach a healthy weight.</p>
         <h5>What is BMI?</h5>
-        <p>Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height, and applies
-          to most adult men and women aged 20 and over. </p>
+        <p>Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height. It applies
+          to most men and women ages 20 and older. </p>
         <h5>What is BMR?</h5>
-        <p>Your Basal Metabolic Rate (BMR) is an estimate of how many calories you'd burn if you were to do nothing but rest
-          for 24 hours. It represents the minimum amount of energy needed to keep your body functioning, including breathing
-          and keeping your heart beating.</p>
+        <p>Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise. It represents the minimum amount of energy your body needs to function normally.</p>
         <div class="form">
           <!-- <form ng-controller="mainCtrl" class="col s12"> -->
           <form class="col s12">
-            <label>Gender</label>
+            <label>Biological sex:</label>
             <br>
             <label>
               <input type="radio" id="gender" class="with-gap" name="gender" value="female" checked>
@@ -112,18 +111,24 @@
             <input type="number" id="age" value="">
             <br>
             <br>
+            <label>Activity Level:</label>
             <div class="input-field col s6">
               <select name="activity" id="activity">
-                <option value="" disabled selected>Select Activity Level</option>
-                <option value="1">Sedentary</option>
-                <option value="2">Light Active</option>
+                <option value="" disabled selected>Select From List</option>
+                <option value="1">Not Active</option>
+                <option value="2">Slightly Active</option>
                 <option value="3">Moderately Active</option>
                 <option value="4">Very Active</option>
                 <option value="5">Extra Active</option>
               </select>
-              <label>Activeness:</label>
               <br>
             </div>
+            <div class="center">
+                <button class="waves-effect waves-light btn-large" type="button" id="click-result">
+                  Calculate Results</button>
+                  <br>
+            </div>
+            <br>
             <div>
               <br>
               <b>Your BMI is:</b>
@@ -137,12 +142,6 @@
             </div>
 
           </form>
-
-          <div class="center">
-            <button class="waves-effect waves-light btn-large" type="button" id="click-result">
-              Result</button>
-              <br>
-          </div>
 
           <div id="bmi-image" class="bmi-image">
 
@@ -194,6 +193,7 @@
 
 <script src="./bmi.js"></script>
 <script src="./assets/javascript/logout.js"></script>
+<script src="./assets/javascript/app.js"></script>
 
 </body>
 

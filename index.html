@@ -46,22 +46,27 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo center">FitFood</a>
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <!-- <li>
-                            <a href="sass.html">Sass</a>
+                    <a href="#!" class="brand-logo center">FitFood</a>
+                    <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="./workouts.html">My Workouts</a>
                         </li>
                         <li>
-                            <a href="badges.html">Components</a>
+                            <a href="./tracker.html">My Tracker</a>
                         </li>
                         <li>
-                            <a href="collapsible.html">JavaScript</a>
-                        </li> -->
+                            <a href="./index.html" id="logout">Sign Out</a>
+                        </li>
                     </ul>
+                    <ul class="sidenav" id="mobile-demo">
+                            <li><a href="./workouts.html">My Workouts</a></li>
+                            <li><a href="#">My Tracker</a></li>
+                            <li><a href="./index.html">Sign Out</a></li>
+                        </ul>
                 </div>
             </nav>
         </div>
-
     </div>
 
     <div class="main-content">
@@ -147,6 +152,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/javascript/login.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 
 </body>
 
