@@ -26,7 +26,7 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/logo_fitfood-02.png" />
 
   <link rel="stylesheet" href="./assets/css/bmi.css">
-
+  <script src="./assets/javascript/app.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -38,37 +38,59 @@
       $('.tooltipped').tooltip();
     });
 
-
   </script>
 </head>
 
 <body ng-app="bmiApp">
-    <div class="header">
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">FitFood</a>
-                    <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a href="./workouts.html">My Workouts</a>
-                        </li>
-                        <li>
-                            <a href="./tracker.html">My Tracker</a>
-                        </li>
-                        <li>
-                            <a href="./index.html" id="logout">Sign Out</a>
-                        </li>
-                    </ul>
-                    <ul class="sidenav" id="mobile-demo">
-                            <li><a href="./workouts.html">My Workouts</a></li>
-                            <li><a href="#">My Tracker</a></li>
-                            <li><a href="./index.html">Sign Out</a></li>
-                        </ul>
-                </div>
-            </nav>
+  <div class="header">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">FitFood</a>
+          <a href="#" data-target="mobile-demo" class="right sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="./workouts.html">My Workouts</a>
+            </li>
+            <li>
+              <a href="./tracker.html">My Tracker</a>
+            </li>
+            <li>
+              <a href="./index.html" id="logout">Sign Out</a>
+            </li>
+          </ul>
         </div>
+      </nav>
     </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="./assets/images/mockup_bike2.png">
+          </div>
+          <a href="#">&nbsp;&nbsp;</a>
+          <a href="#">
+            <span class="white-text name">&nbsp;&nbsp;</span>
+          </a>
+          <a href="#">
+            <span class="white-text email">&nbsp;&nbsp;</span>
+          </a>
+          <a href="#">&nbsp;&nbsp;</a>
+        </div>
+      </li>
+      <li>
+        <a href="./workouts.html">My Workouts</a>
+      </li>
+      <li>
+        <a href="./tracker.html">My Tracker</a>
+      </li>
+      <li>
+        <a href="./index.html">Sign Out</a>
+      </li>
+    </ul>
+  </div>
   <div class="main-content">
     <div class="container card-content content-white" style="margin-top:20px;">
       <div class="calculator">
@@ -78,7 +100,8 @@
         <h2 class="main-header">{{mainHeader}}</h2>
         <hr>
         <br> -->
-        <p>Use the calculator below to determine your BMI & BMR. We'll use those results to recommend daily meals and workouts to help you reach a healthy weight.</p>
+        <p>Use the calculator below to determine your BMI & BMR. We'll use those results to recommend daily meals and workouts
+          to help you reach a healthy weight.</p>
         <div class="form">
           <!-- <form ng-controller="mainCtrl" class="col s12"> -->
           <form class="col s12">
@@ -122,22 +145,28 @@
               <br>
             </div>
             <div class="center">
-                <button class="waves-effect waves-light btn-large" type="button" id="click-result">
-                  Calculate Results</button>
-                  <br>
+              <button class="waves-effect waves-light btn-large" type="button" id="click-result">
+                Calculate Results</button>
+              <br>
             </div>
             <br>
             <div>
               <br>
-              <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height."><i class="material-icons">info</i></a>
-              &nbsp;&nbsp;<b>Your BMI is:</b>
+              <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height.">
+                <i class="material-icons">info</i>
+              </a>
+              &nbsp;&nbsp;
+              <b>Your BMI is:</b>
               <br>
               <!-- <h3 class="result">{{stats.BMI | number: 0}}</h3> -->
               <p id="result"></p>
               <br>
-              <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise."><i class="material-icons">info</i></a>
+              <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise.">
+                <i class="material-icons">info</i>
+              </a>
 
-              &nbsp;&nbsp;<b>Your BMR is:</b>
+              &nbsp;&nbsp;
+              <b>Your BMR is:</b>
               <p id="caloriesneeded"></p>
               <br>
             </div>
@@ -164,26 +193,25 @@
     </div>
 
     <div class="footer">
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <h5 class="center white-text">Developed by Team A-JACS</h5>
-                    </div>
-                </div>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div>
+              <h5 class="center white-text">Developed by Team A-JACS</h5>
             </div>
-            <div class="center footer-copyright">
-                <div class="container">
-                    © 2018 Copyright
-                </div>
-            </div>
-        </footer>
+          </div>
+        </div>
+        <div class="center footer-copyright">
+          <div class="container">
+            © 2018 Copyright
+          </div>
+        </div>
+      </footer>
     </div>
 </body>
 
 <script src="./assets/javascript/bmi.js"></script>
 <script src="./assets/javascript/logout.js"></script>
-<script src="./assets/javascript/app.js"></script>
 
 </body>
 

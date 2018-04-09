@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fit Food</title>
+    <title>Fit Food: Fitness + Food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Materialize CSS -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
@@ -25,6 +26,7 @@
 
     <!-- Page icon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/logo_fitfood-02.png" />
+    
 </head>
 
 <body>
@@ -61,14 +63,29 @@
                             <a href="./index.html" id="logout">Sign Out</a>
                         </li>
                     </ul>
-                    <ul class="sidenav" id="mobile-demo">
-                            <li><a href="./workouts.html">My Workouts</a></li>
-                            <li><a href="#">My Tracker</a></li>
-                            <li><a href="./index.html">Sign Out</a></li>
-                        </ul>
                 </div>
             </nav>
         </div>
+        <ul class="sidenav" id="mobile-demo">
+                <li><div class="user-view">
+                        <div class="background">
+                          <img src="./assets/images/mockup_bike2.png">
+                        </div>
+                        <a href="#">&nbsp;&nbsp;</a>
+                        <a href="#"><span class="white-text name">&nbsp;&nbsp;</span></a>
+                        <a href="#"><span class="white-text email">&nbsp;&nbsp;</span></a>
+                        <a href="#">&nbsp;&nbsp;</a>
+                      </div></li>
+            <li>
+                <a href="./workouts.html">My Workouts</a>
+            </li>
+            <li>
+                <a href="./tracker.html">My Tracker</a>
+            </li>
+            <li>
+                <a href="./index.html">Sign Out</a>
+            </li>
+        </ul>
     </div>
 
     <div class="main-content">
@@ -177,13 +194,11 @@
             </div>
         </footer>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/javascript/tracker.js"></script>
     <script src="./assets/javascript/logout.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
     <script src="./assets/javascript/app.js"></script>
+
 </body>
 
 </html>
