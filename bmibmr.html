@@ -104,7 +104,7 @@
           to help you reach a healthy weight.</p>
         <div class="form">
           <!-- <form ng-controller="mainCtrl" class="col s12"> -->
-          <form class="col s12">
+          <form>
             <label>Biological sex:</label>
             <br>
             <label>
@@ -150,16 +150,14 @@
               <br>
             </div>
             <br>
-            <div>
               <br>
               <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height.">
                 <i class="material-icons">info</i>
               </a>
               &nbsp;&nbsp;
               <b>Your BMI is:</b>
-              <br>
               <!-- <h3 class="result">{{stats.BMI | number: 0}}</h3> -->
-              <p id="result"></p>
+              <span id="result"></span>
               <br>
               <a class="btn tooltipped" data-position="bottom" data-tooltip="Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise.">
                 <i class="material-icons">info</i>
@@ -167,10 +165,9 @@
 
               &nbsp;&nbsp;
               <b>Your BMR is:</b>
-              <p id="caloriesneeded"></p>
+              <span id="caloriesneeded"></span>
               <br>
-            </div>
-
+              <br>
           </form>
 
           <div id="bmi-image" class="bmi-image">
