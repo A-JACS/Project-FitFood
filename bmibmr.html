@@ -25,8 +25,8 @@
   <!-- Page icon -->
   <link rel="icon" type="image/x-icon" href="./assets/images/logo_fitfood-02.png" />
 
-  <link rel="stylesheet" href="bmi.css">
-
+  <link rel="stylesheet" href="./assets/css/bmi.css">
+  <script src="./assets/javascript/app.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -62,7 +62,32 @@
         </div>
       </nav>
     </div>
-
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="./assets/images/mockup_bike2.png">
+          </div>
+          <a href="#">&nbsp;&nbsp;</a>
+          <a href="#">
+            <span class="white-text name">&nbsp;&nbsp;</span>
+          </a>
+          <a href="#">
+            <span class="white-text email">&nbsp;&nbsp;</span>
+          </a>
+          <a href="#">&nbsp;&nbsp;</a>
+        </div>
+      </li>
+      <li>
+        <a href="./workouts.html">My Workouts</a>
+      </li>
+      <li>
+        <a href="./tracker.html">My Tracker</a>
+      </li>
+      <li>
+        <a href="./index.html">Sign Out</a>
+      </li>
+    </ul>
   </div>
   <div class="main-content">
     <div class="container card-content content-white" style="margin-top:20px;">
@@ -73,19 +98,12 @@
         <h2 class="main-header">{{mainHeader}}</h2>
         <hr>
         <br> -->
-        <p>Use the calculator below to determine your BMI & BMR and get recommended daily meals and exercise workouts based
-          on your results.</p>
-        <h5>What is BMI?</h5>
-        <p>Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height, and applies
-          to most adult men and women aged 20 and over. </p>
-        <h5>What is BMR?</h5>
-        <p>Your Basal Metabolic Rate (BMR) is an estimate of how many calories you'd burn if you were to do nothing but rest
-          for 24 hours. It represents the minimum amount of energy needed to keep your body functioning, including breathing
-          and keeping your heart beating.</p>
+        <p>Use the calculator below to determine your BMI & BMR. We'll use those results to recommend daily meals and workouts
+          to help you reach a healthy weight.</p>
         <div class="form">
           <!-- <form ng-controller="mainCtrl" class="col s12"> -->
-          <form class="col s12">
-            <label>Gender</label>
+          <form>
+            <label>Biological sex:</label>
             <br>
             <label>
               <input type="radio" id="gender" class="with-gap" name="gender" value="female" checked>
@@ -124,27 +142,40 @@
               <label>Activeness:</label>
               <br>
             </div>
-            <div>
-              <br>
-              <b>Your BMI is:</b>
-              <br>
-              <!-- <h3 class="result">{{stats.BMI | number: 0}}</h3> -->
-              <p id="result"></p>
-              <br>
-              <b>Your BMR is:</b>
-              <p id="caloriesneeded"></p>
+            <div class="center">
+              <button class="waves-effect waves-light btn-large" type="button" id="click-result">
+                Calculate Results</button>
               <br>
             </div>
+            <br>
+
+            <div id="input-valid" style="color:red" class="center"></div>
+            <br>
+            <br>
+            <a class="btn tooltipped1" data-position="bottom" data-tooltip="Your Body Mass Index (BMI) is a measure of body fat based on your weight in relation to your height.">
+              <i class="material-icons">info</i>
+            </a>
+            <b>Your BMI is:</b>
+            <span id="result"></span>
+            <br>
+            <br>
+            <a class="btn tooltipped2" data-position="bottom" data-tooltip="Your Basal Metabolic Rate (BMR) is an estimate of how many calories you burn each day without any exercise.">
+              <i class="material-icons">info</i>
+            </a>
+            <b>Your BMR is:</b>
+            <span id="caloriesneeded"></span>
+            <br>
+            <br>
 
           </form>
 
-          <div id="input-valid" style="color:red"></div>
 
-          <div class="center">
+
+          <!-- <div class="center">
             <button class="waves-effect waves-light btn-large" type="button" id="click-result">
               Result</button>
               <br>              
-          </div>
+          </div> -->
 
           <div id="bmi-image" class="bmi-image">
 
@@ -168,33 +199,21 @@
       <footer class="page-footer">
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Developed by Team A-JACS</h5>
-              <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
+            <div>
+              <h5 class="center white-text">Developed by Team A-JACS</h5>
             </div>
-            <!-- <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
-                      </div> -->
           </div>
         </div>
-        <div class="footer-copyright">
+        <div class="center footer-copyright">
           <div class="container">
             © 2018 Copyright
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
           </div>
         </div>
       </footer>
-
     </div>
 </body>
 
-<script src="./bmi.js"></script>
+<script src="./assets/javascript/bmi.js"></script>
 <script src="./assets/javascript/logout.js"></script>
 
 </body>

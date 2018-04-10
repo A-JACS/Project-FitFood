@@ -7,12 +7,11 @@
     <title>Fit Food: Fitness + Food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Materialize CSS -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
@@ -21,6 +20,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/recipe.css" />
     <!-- Page icon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/logo_fitfood-02.png" />
+    <script src="./assets/javascript/app.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,9 @@
             <nav>
                 <div class="nav-wrapper">
                     <a href="#!" class="brand-logo center">FitFood</a>
-                    <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" data-target="mobile-demo" class="right sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
                     <ul class="right hide-on-med-and-down">
                         <li>
                             <a href="./workouts.html">My Workouts</a>
@@ -49,13 +51,40 @@
                 </div>
             </nav>
         </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="./assets/images/mockup_bike2.png">
+                    </div>
+                    <a href="#">&nbsp;&nbsp;</a>
+                    <a href="#">
+                        <span class="white-text name">&nbsp;&nbsp;</span>
+                    </a>
+                    <a href="#">
+                        <span class="white-text email">&nbsp;&nbsp;</span>
+                    </a>
+                    <a href="#">&nbsp;&nbsp;</a>
+                </div>
+            </li>
+            <li>
+                <a href="./workouts.html">My Workouts</a>
+            </li>
+            <li>
+                <a href="./tracker.html">My Tracker</a>
+            </li>
+            <li>
+                <a href="./index.html">Sign Out</a>
+            </li>
+        </ul>
     </div>
     <div class="main-content">
         <div class="container card-content content-white" style="margin-top:20px;padding:20px;">
             <h3>Recipes</h3>
-            <p>Based on your BMR of <span id="bmr"></span> calories, here are 3 recipes that meet to your recommended daily intake.</p>
+            <p>Based on your BMR of
+                <span id="bmr"></span> calories, here are 3 recipes that meet to your recommended daily intake.</p>
             <p>Want more recipes?
-            <a id="reload" class="waves-effect waves-light btn">Plan a New Day</a>
+                <a id="reload" class="waves-effect waves-light btn">Plan a New Day</a>
             </p>
             <div class="recipe-list">
                 <!-- recipe card 1 -->
@@ -116,7 +145,7 @@
     <div class="row">
 
     </div>
-    
+
     <div class="footer">
         <footer class="page-footer">
             <div class="container">
@@ -134,12 +163,10 @@
         </footer>
     </div>
     <!-- JS files -->
-    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./assets/javascript/spoonacular.js"></script>
     <script src="./assets/javascript/logout.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="./assets/javascript/app.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 
 </html>

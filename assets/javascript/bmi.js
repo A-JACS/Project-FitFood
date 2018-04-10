@@ -26,6 +26,12 @@
 
 // });
 
+var elem1 = document.querySelector('.tooltipped1');
+  var instance1 = M.Tooltip.init(elem1);
+
+  var elem2 = document.querySelector('.tooltipped2');
+  var instance2 = M.Tooltip.init(elem2);
+
 
 $('select').formSelect();
 
@@ -81,11 +87,11 @@ function calc() {
   console.log(localStorage.getItem("bmr"));
 }
 
-document.getElementsByTagName("button")[0].addEventListener("click", function () {
-  calc();
-  document.getElementById('caloriesneeded').innerHTML = bmr;
-  calcBMI();
-})
+// document.getElementsByTagName("button")[0].addEventListener("click", function () {
+//   calc();
+//   document.getElementById('caloriesneeded').innerHTML = bmr;
+//   calcBMI();
+// })
 
 
 $("#click-result").on('click', function () {
@@ -96,24 +102,28 @@ $("#click-result").on('click', function () {
   var activity = $('#activity option:selected').val();
 
   // if(actv=="none"){$("#input-valid").html("<p>activeness input is invalid</p>")};
-  if ((height == "") || (height <= 0)){
+  if ((height == "") || (height <= 0)) {
     $("#input-valid").html("<p>Invalid Input(s)</p>");
   }
-  else if ((weight == "") || (weight <= 0)){
+  else if ((weight == "") || (weight <= 0)) {
     $("#input-valid").html("<p>Invalid Input(s)</p>");
   }
-  else if ((age == "") || (age <= 0)){
+  else if ((age == "") || (age <= 0)) {
     $("#input-valid").html("<p>Invalid Input(s)</p>");
   }
-  else if (activity == ""){
+  else if (activity == "") {
     $("#input-valid").html("<p>Invalid Input(s)</p>");
   }
   else {
     $("#input-valid").empty();
 
+    calc();
+    document.getElementById('caloriesneeded').innerHTML = bmr;
+    calcBMI();
+
     $.get("./assets/tpl/bmidisplay.html", function (data) {
       $("#bmi-image").append(data);
-  });
+    });
     // toggleDisplay();
   }
 
