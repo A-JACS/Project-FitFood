@@ -27,7 +27,7 @@
 
     <!-- Page icon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/logo_fitfood-02.png" />
-    
+
 </head>
 
 <body>
@@ -81,15 +81,21 @@
             </nav>
         </div>
         <ul class="sidenav" id="mobile-demo">
-                <li><div class="user-view">
-                        <div class="background">
-                          <img src="./assets/images/mockup_bike2.png">
-                        </div>
-                        <a href="#">&nbsp;&nbsp;</a>
-                        <a href="#"><span class="white-text name">&nbsp;&nbsp;</span></a>
-                        <a href="#"><span class="white-text email">&nbsp;&nbsp;</span></a>
-                        <a href="#">&nbsp;&nbsp;</a>
-                      </div></li>
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="./assets/images/mockup_bike2.png">
+                    </div>
+                    <a href="#">&nbsp;&nbsp;</a>
+                    <a href="#">
+                        <span class="white-text name">&nbsp;&nbsp;</span>
+                    </a>
+                    <a href="#">
+                        <span class="white-text email">&nbsp;&nbsp;</span>
+                    </a>
+                    <a href="#">&nbsp;&nbsp;</a>
+                </div>
+            </li>
             <li>
                 <a href="./workouts.html">My Workouts</a>
             </li>
@@ -134,71 +140,75 @@
         <!-- UPDATE LOG -->
 
         <div class="container">
-            <div class="row">
-                <div id="modal1" class="modal blue-grey darken-1" style="padding:0px">
+            <div class="row">                    
+                <div id="modal1" class="modal blue-grey darken-1" style="height:400px">
+                        <div class="center white-text">Update Log Item</div>
                     <div class="modal-content blue-grey darken-1">
                         <div class="col s12 m12">
-                            <div class="card blue-grey darken-1">
+                            <!-- <div class="card blue-grey darken-1">
                                 <div class="row">
-                                    <div class="card-content yellow-text">
-                                        <span class="card-title">Update Log Item</span>
-                                        <div class="input-field col s4">
-                                            <input id="exercise-input-update" type="text" class="validate">
-                                            <label for="exercise">Exercise</label>
-                                        </div>
-                                        <div class="input-field col s2">
-                                            <!-- <input id="duration-input" type="text" class="validate">
-                                                    <label for="duration">Duration (mins)</label> -->
-                                            <select class="duration-update" id="duration-input-update">
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="40">40</option>
-                                                <option value="50">50</option>
-                                                <option value="60">60</option>
-                                            </select>
-                                            <label>Duration (mins)</label>
-                                        </div>
-                                        <div class="input-field col s1">
-                                            <!-- <input id="sets-input" type="text" class="validate">
-                                                    <label for="sets">Sets</label> -->
-                                            <select class="sets-update" id="sets-input-update">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                                            <label>Sets</label>
-                                        </div>
-                                        <div class="input-field col s3">
-                                            <input id="date-input-update" type="text" class="validate black-text" value="Select Date">
-                                            <label for="date">Date</label>
-                                            <!-- <input id="date" type="text" class="datepicker">
-                                                    <label for="date">Date</label> -->
-                                        </div>
-                                        <div class="input-field col s1">
-                                            <button class="btn waves-effect waves-light" type="submit" name="action" id="update-log-item">
-                                                <i class="material-icons">done</i>Add
-                                            </button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div id="valid-input-update" style="color:red">
-
-                                </div>
+                                    <div class="card-content yellow-text"> -->
+                            
+                            <div class="input-field col s4">
+                                <input id="exercise-input-update" type="text" class="validate">
+                                <label for="exercise">Exercise</label>
                             </div>
+                            <div class="input-field col s2">
+                                <!-- <input id="duration-input" type="text" class="validate">
+                                                    <label for="duration">Duration (mins)</label> -->
+                                <select class="duration-update" id="duration-input-update">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                    <option value="60">60</option>
+                                </select>
+                                <label>Duration (mins)</label>
+                            </div>
+                            <div class="input-field col s1">
+                                <!-- <input id="sets-input" type="text" class="validate">
+                                                    <label for="sets">Sets</label> -->
+                                <select class="sets-update" id="sets-input-update">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <label>Sets</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <input id="date-input-update" type="text" class="validate black-text" value="Select Date">
+                                <label for="date">Date</label>
+                                <!-- <input id="date" type="text" class="datepicker">
+                                                    <label for="date">Date</label> -->
+                            </div>
+                            <div class="input-field col s1">
+                                <button class="btn waves-effect waves-light" type="submit" name="action" id="update-log-item">
+                                    <i class="material-icons">done</i>Add
+                                </button>
+                            </div>
+
+                            <!-- </div> -->
+
+                            <!-- </div> -->
+                            
+                            <!-- </div> -->
+                        </div>
+                        <div class="row">
+                            <div id="valid-input-update" style="color:red" class="center"></div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            
         </div>
 
         <!-- ADD NEW LOG ITEM -->
