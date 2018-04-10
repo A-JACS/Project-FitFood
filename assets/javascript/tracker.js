@@ -2,6 +2,9 @@ var uid = localStorage.getItem("uid");
 var bmi = localStorage.getItem("bmi");
 var bmr = localStorage.getItem("bmr");
 
+$("#date-input").removeClass("white-text");
+$("#date-input").addClass("black-text");
+
 var updateKey = "";
 
 $(document).ready(function () {
