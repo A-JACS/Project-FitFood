@@ -1,9 +1,7 @@
-var bmr = localStorage.getItem("bmr");
-
 $(document).ready(function() {
 
-// will take BMR input from local storage -- hard-coded meanwhile
-var targetCalories = bmr;
+// grab user's BMR input from local storage 
+var targetCalories = localStorage.getItem("bmr");
 
 $("#bmr").html("<b>" + targetCalories + "</b>");
 
@@ -65,4 +63,8 @@ $.ajax({
     };
   });
 
+});
+
+$('#reload').click(function() {
+  location.reload();
 });

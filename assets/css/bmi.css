@@ -1,0 +1,43 @@
+
+
+.jumbotron {
+  margin-top: 5%;
+  width: 800px;
+}
+
+
+.result {
+  color: red;
+}
+
+.bmi-image {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.calculator {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+h5 {
+  color: #23A6D5;
+}
+
+.expand{
+  width: 240px;
+}
+
+a.btn.tooltipped {
+  background-color: #778899;
+}
